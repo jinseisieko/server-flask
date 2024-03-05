@@ -1,0 +1,26 @@
+/* Стили для всего контейнера */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+/* Стили для заголовка */
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Стили для описания */
+p {
+  max-width: 600px;
+  line-height: 1.5rem;
+}
