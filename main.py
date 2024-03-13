@@ -1,10 +1,17 @@
+import argparse
+
 import requests
 from pprint import pprint
-r = requests.get("https://jsonplaceholder.typicode.com/posts", ).json()
-d = {}
-for dic in r:
-    if dic["userId"] in d:
-        d[dic["userId"]].append(dic)
-    else:
-        d[dic["userId"]] = [dic]
-pprint(d)
+
+parser = argparse.ArgumentParser(
+                    prog='ProgramName',
+                    description='What the program does',
+                    epilog='Text at the bottom of help')
+
+parser.add_argument('filename')           # positional argument
+parser.add_argument('-c', '--count', type=int)      # option that takes a value
+parser.add_argument('-v', '--verbose',
+                    action='store_true')  # on/off flag
+
+args = parser.parse_args()
+print(args.filename, args.count, args.verbose)
